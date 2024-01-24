@@ -64,7 +64,7 @@ const Forecast = () => {
   return (
     <>
       {citta && citta.list && (
-        <div>
+        <div className='margine'>
           <h2 className='citta'>{citta?.city.name}</h2>
           <div className="destra">
           <Link className="text-white" to="/">

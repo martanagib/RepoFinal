@@ -20,7 +20,7 @@ button {
   color: rgb(7, 23, 35);
   background-color:rgb(251, 231, 251);
   border: 1px solid rgb(0, 102, 176);
-  border-radius: 40px;
+  border-radius: 10px;
   width: 20%;
   margin : 15px;
   height: 40px;
@@ -36,7 +36,7 @@ input {
   border: 1px solid rgb(0, 102, 176);
   width: 50%;
   height: 40px;
-  border-radius: 40px;
+  border-radius: 10px;
   margin-left: 20%;
   font-weight: 600;
   font-size: larger;
@@ -65,7 +65,7 @@ h2{
   background-color: rgb(251, 231, 251);
   margin-left: 35%;
   margin-right: 35%;
-  border-radius: 40px;
+  border-radius: 10px;
   opacity:0.6
 
 
@@ -82,7 +82,7 @@ h2{
 }
 
 @media (max-width: 767px) {
-  .results-container .cardDiv .spazi {
+  .prova {
     display: block;
   }
 }
@@ -96,4 +96,13 @@ h2{
 .spazi {
   justify-content: center;
   
+}
+
+
+.margine {
+  margin-top: 3%;
+}
+
+h3 {
+  color:rgb(7, 23, 35);
 }

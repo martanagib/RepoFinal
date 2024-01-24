@@ -74,7 +74,7 @@ const Results = () => {
                 </div>
                 <div className="carine col-12 col-md-6">
                   <p>Wind Speed</p>
-                  <p>{city.wind.speed}</p>
+                  <p>{city.wind.speed}Km/h</p>
                 </div>
                 <div className="carine col-12 col-md-6">
                   <p>Temp. Max</p>
