@@ -1,9 +1,10 @@
 //importazione di tutti cio di cui ho bisogno per questo component
 import { useEffect, useState } from "react";
-import { Container, Row} from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { LiaClockSolid } from "react-icons/lia";
+import { FaTemperatureLow } from "react-icons/fa";
 
 /*component che, attraverso l'endpoint fornito e i dati che gli vengono mandati dallo stato del search, recupara i dati relativi alle previsioni dei prossimi 5 giorni (ognuno dei quali diviso in fasce orarie ogni 3 ore).                         i dati ricevuti verranno utilizzati per popolare la pagina
  */
@@ -88,8 +89,11 @@ const Forecast = () => {
                 
                 <div key={i}>
                   <div className="carine">
+                  <LiaClockSolid />
                     <p>{new Date(cit.dt * 1000).toLocaleTimeString()}</p>
+                    <FaTemperatureLow />
                     <p>{cit.main.temp}°C</p>
+                    
                     <p>{cit.weather[0].main}</p>
                     <p>{cit.weather[0].description}</p>
                     

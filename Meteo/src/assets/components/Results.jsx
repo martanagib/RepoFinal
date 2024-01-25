@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaArrowRight } from "react-icons/fa";
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
-
+import { GiWindsock } from "react-icons/gi";
+import { FaTemperatureArrowUp } from "react-icons/fa6";
+import { FaTemperatureArrowDown } from "react-icons/fa6";
+import { RiWaterPercentFill } from "react-icons/ri";
 
 /*component che, attraverso l'endpoint fornito e i dati che gli vengono mandati dallo stato del search, recupara i dati relativi alle previsioni di oggi. i dati ricevuti verranno utilizzati per popolare la pagina
  */
@@ -38,8 +41,8 @@ const Results = () => {
               data: [
                 { label: "Temp. Max", temperature: data.main.temp_max },
                 { label: "Temp. Min", temperature: data.main.temp_min },
-                { label: "Temp. Percepita", temperature: data.main.feels_like },
-                { label: "Temp. Media", temperature: data.main.temp }
+                { label: "Temperature", temperature: data.main.feels_like },
+                { label: "Temp. Feels", temperature: data.main.temp }
               ],
               backgroundColor: ['rgb(251, 231, 251, 0.6)', 'rgb(251, 231, 251, 0.6)', 'rgb(251, 231, 251, 0.6)', 'rgb(251, 231, 251, 0.6)'],
               borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 205, 86, 1)', 'rgba(75, 192, 192, 1)'],
@@ -81,7 +84,7 @@ const Results = () => {
           <div className="row"> 
           <div className="col-3"></div>
             <h2 className="col-6 city">
-              {city.name} {city.main.temp}°C
+             {city.name} {city.main.temp}°C
             </h2>
             <div className="col-3"></div>
           </div>
@@ -98,18 +101,22 @@ const Results = () => {
               <div className="d-flex justify-content-evenly prova row">
                 <div className="carine col-12 col-md-6">
                   <p>Humidity</p>
+                  <RiWaterPercentFill />
                   <p>{city.main.humidity}%</p>
                 </div>
                 <div className="carine col-12 col-md-6">
                   <p>Wind Speed</p>
+                  <GiWindsock/>
                   <p>{city.wind.speed}Km/h</p>
                 </div>
                 <div className="carine col-12 col-md-6">
                   <p>Temp. Max</p>
+                  <FaTemperatureArrowUp />
                   <p>{city.main.temp_max}°C</p>
                 </div>
                 <div className="carine col-12 col-md-6">
                   <p>Temp. Min</p>
+                  <FaTemperatureArrowDown />
                   <p>{city.main.temp_min}°C</p>
                 </div>
               </div>
