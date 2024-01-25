@@ -33,7 +33,7 @@ const MainSearch = () => {
   };
 
   return (
-    <Container>
+    <Container className="immagine">
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1 className="display-1">Remote Jobs Search</h1>

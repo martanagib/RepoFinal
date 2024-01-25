@@ -5,9 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+background-image: url(assets/images/Green\ and\ Turquoise\ Bubbles\ Modern\ Swiss\ Vaccine\ Scheduling\ General\ Health\ Yard\ Sign.png);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.immagine {
+  
+ background-image: url(assets/images/future2.png);
 }
