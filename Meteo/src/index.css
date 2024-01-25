@@ -1,5 +1,6 @@
 body {
   background-image: url(assets/images/img3.jpg);
+  height: 100%;
 }
 
 .carine {
@@ -11,7 +12,7 @@ body {
    font-weight: 700;
    opacity: 0.6;
    text-align: center;
-   width:8rem
+ width:8rem
    
 
 }
@@ -49,8 +50,6 @@ h2{
   font-weight: bolder;
   font-size: 2rem;
   background-color: rgb(251, 231, 251);
-  margin-left: 35%;
-  margin-right: 35%;
   border-radius: 10px;
   opacity: 0.6;
   
@@ -63,8 +62,6 @@ h2{
   text-align: center;
   color:rgb(7, 23, 35);
   background-color: rgb(251, 231, 251);
-  margin-left: 35%;
-  margin-right: 35%;
   border-radius: 10px;
   opacity:0.6
 
@@ -82,18 +79,15 @@ h2{
 }
 
 @media (max-width: 767px) {
-  .prova {
+  #prova {
     display: block;
   }
 }
 
 
-.prova {
-  width:50%
-}
 
 
-.spazi {
+.spazi, .chart {
   justify-content: center;
   
 }
@@ -105,4 +99,18 @@ h2{
 
 h3 {
   color:rgb(7, 23, 35);
+}
+
+.grafico {
+  background-color: rgb(251, 231, 251);
+  border-radius: 20px;
+  opacity:0.6;
+  border: 1px solid rgb(0, 102, 176);
+  margin-top: -2%;
+  padding-top: 2%;
+  padding-right: 4vw;
+}
+
+.city {
+  border: 1px solid rgb(0, 102, 176);
 }

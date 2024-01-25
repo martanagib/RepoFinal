@@ -64,22 +64,26 @@ const Forecast = () => {
   return (
     <>
       {citta && citta.list && (
-        <div className='margine'>
-          <h2 className='citta'>{citta?.city.name}</h2>
-          <div className="destra">
+        <div className='margine container'>
+          <div className="row">
+          <h2 className='citta col'>{citta?.city.name}</h2>
+          </div>
+          <div className="destra row">
           <Link className="text-white" to="/">
               Vai alla previsioni di oggi
               <FaArrowRight />
             </Link>
             </div>
-          <Container>
-            <Row>
+          
+            
                <div>
           {dayByDay().map((dayData, index) => (
             <div key={index}>
-              
+              <div className="row">
               <h3 className="data">{dayData.day}</h3>
-              <div className='d-flex gap-2 justify-content-around'>
+              </div>
+              <div className="row">
+              <div className="d-flex  flex-wrap justify-content-between col-xs-6">
               {dayData.forecasts.map((cit, i) => (
                 
                 <div key={i}>
@@ -90,19 +94,20 @@ const Forecast = () => {
                     <p>{cit.weather[0].description}</p>
                     
                   </div>
-                
-                  </div>
+                </div>
+                  
                
               ))}
               </div>
               </div>
+              </div>
+              
             
           ))}
           </div>
-            </Row>
-          </ Container>
         </div>
       )}
+    
     </>
   );
 };
