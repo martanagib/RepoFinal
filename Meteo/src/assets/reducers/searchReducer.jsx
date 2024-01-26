@@ -1,4 +1,4 @@
-import {SET_CITY} from '../actions/searchAction'
+import { SET_CITY } from "../actions/searchAction";
 
 const searchReducer = (state = "", action) => {
   switch (action.type) {

@@ -65,53 +65,45 @@ const Forecast = () => {
   return (
     <>
       {citta && citta.list && (
-        <div className='margine container'>
+        <div className="margine container">
           <div className="row">
-          <h2 className='citta col'>{citta?.city.name}</h2>
+            <h2 className="citta col">{citta?.city.name}</h2>
           </div>
           <div className="destra row">
-          <Link className="text-white" to="/">
+            <Link className="text-white" to="/">
               Vai alla previsioni di oggi
               <FaArrowRight />
             </Link>
-            </div>
-          
-            
-               <div>
-          {dayByDay().map((dayData, index) => (
-            <div key={index}>
-              <div className="row">
-              <h3 className="data">{dayData.day}</h3>
-              </div>
-              <div className="row">
-              <div className="d-flex  flex-wrap justify-content-between col-xs-6">
-              {dayData.forecasts.map((cit, i) => (
-                
-                <div key={i}>
-                  <div className="carine">
-                  <LiaClockSolid />
-                    <p>{new Date(cit.dt * 1000).toLocaleTimeString()}</p>
-                    <FaTemperatureLow />
-                    <p>{cit.main.temp}°C</p>
-                    
-                    <p>{cit.weather[0].main}</p>
-                    <p>{cit.weather[0].description}</p>
-                    
+          </div>
+
+          <div>
+            {dayByDay().map((dayData, index) => (
+              <div key={index}>
+                <div className="row">
+                  <h3 className="data">{dayData.day}</h3>
+                </div>
+                <div className="row">
+                  <div className="d-flex  flex-wrap justify-content-between col-xs-6">
+                    {dayData.forecasts.map((cit, i) => (
+                      <div key={i}>
+                        <div className="carine">
+                          <LiaClockSolid />
+                          <p>{new Date(cit.dt * 1000).toLocaleTimeString()}</p>
+                          <FaTemperatureLow />
+                          <p>{cit.main.temp}°C</p>
+
+                          <p>{cit.weather[0].main}</p>
+                          <p>{cit.weather[0].description}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                  
-               
-              ))}
               </div>
-              </div>
-              </div>
-              
-            
-          ))}
+            ))}
           </div>
         </div>
       )}
-    
     </>
   );
 };
